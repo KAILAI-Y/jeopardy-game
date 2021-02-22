@@ -38,18 +38,27 @@ int main(int argc, char *argv[])
     initialize_game();
 
     // Prompt for players names
+<<<<<<< HEAD
     printf("Please Enter your Names:\n");
     
     // initialize each of the players in the array
     for(int i=0; i<4; i++){
 	scanf("%s", players[i].name);
     }
+=======
+    
+    // initialize each of the players in the array
+>>>>>>> dba3af175594a332730b2cd4c3378681b204effb
 
     // Perform an infinite loop getting command input from users until game ends
     while (fgets(buffer, BUFFER_LEN, stdin) != NULL)
     {
         // Call functions from the questions and players source files
+<<<<<<< HEAD
 	run_game(token, players);
+=======
+
+>>>>>>> dba3af175594a332730b2cd4c3378681b204effb
         // Execute the game until all questions are answered
 
         // Display the final results and exit
