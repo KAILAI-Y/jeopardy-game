@@ -13,18 +13,10 @@
 // Returns true if the player name matches one of the existing players
 bool player_exists(player *players, int num_players, char *name)
 {
-    bool exists;
-    for(int i = 0; i<= sizeof(players); i++){
-	if (players[i].name == name)
-	{
-	    exists = true;
-	    break;
+    for(int i = 0; i < num_players; i++) {
+		if(strcmp(players[i].name, name) == 0)
+			return true;
 	}
-	else{
-	    exists = false;
-	}
-	
-    }
     return false;
 }
 
@@ -32,11 +24,8 @@ bool player_exists(player *players, int num_players, char *name)
 // player given their name
 void update_score(player *players, int num_players, char *name, int score)
 {
-    for(int i = 1; i <= num_players; i++)
-    {
-        if (players[i].name == name)
-        {
-            players[i].score = score; 
-        }       
+    for(int i = 0; i < num_players; i++) {
+    	if(strcmp(players[i].name, name) == 0) 
+    		players[i].score += score;
     }
 }
